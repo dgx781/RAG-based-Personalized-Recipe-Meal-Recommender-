@@ -365,6 +365,66 @@ Health Conditions: None
 
 * * *
 
+## 🚀 Deployment Guide — Streamlit Community Cloud
+
+🌐 **Live Demo:** [NutriGenie AI on Streamlit Cloud](https://7sp6egmqh2pt9ex5pscxux.streamlit.app/)
+
+### 1️⃣ Sign in to Streamlit Community Cloud
+
+* Go to [Streamlit Cloud](https://streamlit.io/cloud)
+
+* Click "Sign in" and choose GitHub/Google authentication.
+📄 Docs: [Sign in to Streamlit Cloud](https://docs.streamlit.io/streamlit-community-cloud/get-started/deploy-an-app#sign-in-to-streamlit-community-cloud)
+
+### 2️⃣ Link Your GitHub Account
+
+* Authorize Streamlit to access your GitHub repos.
+* This allows Streamlit to pull your project directly from GitHub.
+📄 Docs:  [Link GitHub to Streamlit Cloud](https://docs.streamlit.io/streamlit-community-cloud/get-started/deploy-an-app#connect-your-github-account)
+
+### 3️⃣ Create New App from Repository
+
+* On your Streamlit Cloud dashboard, click "New app"
+* Select "Deploy from a public GitHub repo"
+📄 Docs: [Deploy from GitHub](https://docs.streamlit.io/streamlit-community-cloud/get-started/deploy-an-app#deploy-from-github)
+
+### 4️⃣ Fill Deployment Form Fields
+
+| Field | Example Value | Description |
+| -----------|----------|-------------|
+| Repository | your-username/NutriGenei-AI | GitHub repo path |
+| Branch | main | Branch to deploy |
+| Main file path | app.py | Entry point for the app |
+| App URL | your-app-name.streamlit.app | Auto-generated from repo name |
+
+📄 Docs: [Deployment Form Details](https://docs.streamlit.io/streamlit-community-cloud/get-started/deploy-an-app#add-your-app-details)
+
+### 5️⃣ Add Environment Variables (Secrets)
+
+* Click "Advanced settings" → "Secrets"
+* Paste contents of your .env file from local development:
+
+📄 Docs: [Secrets Management in Streamlit Cloud](https://docs.streamlit.io/streamlit-community-cloud/deploy-your-app/secrets-management)
+
+### 6️⃣ Deploy and Access
+
+* Click "**Deploy**" and wait for the build process to finish.
+* Once deployed, you'll get a **public URL**:
+
+``` bash
+https://your-app-name.streamlit.app
+```
+Your app is now accessible from any device without installing Python locally.
+
+## 🔑 Environment Variables
+
+These variables should be set in Streamlit Cloud Secrets:
+
+| Variable | Description |
+|----------|-------------|
+| RECIPE_GROQ_API_KEY | API key from Groq |
+| GROQ_MODEL | Model name (default: deepseek-r1-distill-llama-70b) |
+
 ## 📜 License
 
 ## 
